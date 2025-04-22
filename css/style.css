@@ -1,0 +1,469 @@
+/* 頁面基本樣式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* 設定 Nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004080;
+    padding: 0.5rem 2rem;
+}
+
+/* Logo 部分 */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    height: 80px;
+    /* 根據需要調整 logo 大小 */
+}
+
+.hospital-name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 設定選單樣式 */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, background-color 0.3s;
+    display: inline-block;
+    border-radius: 0.5rem;
+}
+
+nav ul li a:hover {
+    color: #66ccff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown Menu */
+nav ul li {
+    position: relative;
+}
+
+nav ul .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #004080;
+    display: none;
+    flex-direction: column;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+nav ul .submenu li {
+    margin: 0;
+}
+
+nav ul .submenu li a {
+    padding: 0.5rem 1rem;
+    display: block;
+    color: white;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+nav ul .submenu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav ul .dropdown:hover .submenu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+
+/* 鼠標懸停時顯示下拉選單 */
+nav ul .dropdown:hover .submenu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+
+.carousel {
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* 控制箭頭 */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 50, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 0.5rem;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 50, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background-color: #004080;
+    /* 純藍背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 50, 0.4);
+    /* 淡淡的深藍遮罩 */
+    backdrop-filter: blur(2px);
+    z-index: 1;
+}
+
+.hero .overlay {
+    position: relative;
+    z-index: 2;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    /* 微透明卡片背景 */
+    border-radius: 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #007acc;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #005c99;
+}
+
+/* Main 內容區 */
+.main-content {
+    padding: 2rem 5%;
+    background-color: white;
+}
+
+.intro-section,
+.history-section,
+.mission-section,
+.facilities-section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro-section:nth-child(even),
+.history-section:nth-child(even),
+.mission-section:nth-child(even),
+.facilities-section:nth-child(even) {
+    background-color: #eaf3ff;
+}
+
+.team-section {
+    padding: 2rem;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.team-section h1 {
+    color: #004080;
+    margin-bottom: 2rem;
+}
+
+.card-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-bottom: 2.5rem;
+}
+/* 整體翻卡片容器設置 */
+.flip-card {
+    background-color: transparent;
+    width: 280px;
+    height: 350px;
+    perspective: 1000px;
+    /* 提供3D效果 */
+}
+
+/* 翻卡片內部容器 */
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    /* 保持3D效果 */
+    transition: transform 0.8s ease;
+    /* 卡片翻轉時的過渡動畫 */
+}
+
+/* 卡片懸停時翻轉 */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    /* 翻轉180度 */
+}
+
+/* 卡片正面與背面共用的樣式 */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* 隱藏背面的內容 */
+    border-radius: 1rem;
+    /* 邊角圓潤 */
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* 卡片陰影 */
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* 文字置中對齊 */
+}
+
+/* 內部文字內容調整 */
+.doctor {
+    text-align: start;
+    /* 文字靠左對齊 */
+}
+
+/* 正面卡片樣式 */
+.flip-card-front {
+    background: radial-gradient(circle at top, #eaf4ff, #d0e4ff);
+    color: #003366;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+}
+
+.card-header {
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.doctor-name {
+    font-size: 2.0rem;
+    margin: 0.6rem 0 0.2rem;
+    font-weight: bold;
+}
+
+.position {
+    font-size: 1.5rem;
+    color: #336699;
+    margin: 0;
+}
+
+/* 背面卡片基本樣式 */
+.flip-card-back {
+    background: radial-gradient(circle at top, #003366, #001f3f);
+    color: #ffffff;
+    transform: rotateY(180deg);
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 內容段落 */
+.info-section p {
+    margin: 0.4rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* 名言加強 */
+.motto {
+    font-style: italic;
+    margin-top: 0.8rem;
+    color: #99ccff;
+}
+
+/* 分隔線 */
+.divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    /* 白色透明線 */
+    margin: 1rem 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* 避免某些瀏覽器忽略 border */
+}
+
+/* 扮演者區 */
+.performer h4 {
+    font-size: 1rem;
+    color: #FFD700;
+    margin-bottom: 0.3rem;
+}
+
+.performer p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    color: #cce5ff;
+}
+
+/* Twitch連結 */
+.twitch-link {
+    display: flex;
+    align-items: center;
+    color: #ffcc66;
+    font-size: 0.95rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.twitch-link:hover {
+    color: #ff6600;
+}
+
+.twitch-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.4rem;
+}
+
+
+.section-title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #004080;
+    font-weight: bold;
+    border-left: 5px solid #66ccff;
+    padding-left: 1rem;
+}
+
+footer {
+    background-color: #004080;
+    /* 與輪播區同樣的藍色 */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+}
