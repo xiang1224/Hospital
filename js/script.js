@@ -5,10 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Header 內容
     const headerContent = `
-        <nav>
+<nav>
     <div class="logo-container">
+    <a href="index.html">
         <img src="./img/logo.png" alt="白塔醫院 Logo" class="logo">
-    </div>
+    </a>
+</div>
+
     <ul>
         <li><a href="index.html">首頁</a></li>
         <li class="dropdown">
@@ -21,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
         <li class="dropdown">
             <a href="#">服務項目 ▾</a>
             <ul class="submenu">
-                <li><a href="#">急診科</a></li>
-                <li><a href="#">外科</a></li>
-                <li><a href="#">內科</a></li>
+                <li><a href="emergency.html"><i class="fa-solid fa-hospital-user"></i> 創傷中心</a></li>
+                <li><a href="surgery.html"><i class="fa-solid fa-user-doctor"></i> 外科</a></li>
+                <li><a href="internal.html"><i class="fa-solid fa-stethoscope"></i> 內科</a></li>
             </ul>
         </li>
         <li><a href="#">加入我們</a></li>
@@ -31,36 +34,41 @@ document.addEventListener("DOMContentLoaded", function () {
     </ul>
 </nav>
 
+
     `;
     document.getElementById("header").innerHTML = headerContent;
 
     // Footer 內容
     const footerContent = `
         <footer>
-            <p>&copy; 2025 白塔醫院所有，曉翔所有，阿鳥協助製作</p>
+            <p>&copy; 2025 此網站為曉翔所有，阿鳥協助製作</p>
         </footer>
     `;
     document.getElementById("footer").innerHTML = footerContent;
 });
 
-
-
-const slide = document.querySelector('.carousel-slide');
-const images = document.querySelectorAll('.carousel-slide img');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
+const track = document.querySelector('.carousel-track');
+const items = document.querySelectorAll('.carousel-item');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
 
 let index = 0;
 
-function showSlide(n) {
-    if (n < 0) index = images.length - 1;
-    else if (n >= images.length) index = 0;
-    else index = n;
-    slide.style.transform = `translateX(-${index * 100}%)`;
+function updateSlide() {
+    track.style.transform = `translateX(-${index * 100}%)`;
 }
 
-prevBtn.addEventListener('click', () => showSlide(index - 1));
-nextBtn.addEventListener('click', () => showSlide(index + 1));
+prevBtn.addEventListener('click', () => {
+    index = (index - 1 + items.length) % items.length;
+    updateSlide();
+});
 
-// 自動播放
-setInterval(() => showSlide(index + 1), 5000);
+nextBtn.addEventListener('click', () => {
+    index = (index + 1) % items.length;
+    updateSlide();
+});
+
+setInterval(() => {
+    index = (index + 1) % items.length;
+    updateSlide();
+}, 5000);

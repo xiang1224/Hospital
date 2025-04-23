@@ -15,6 +15,13 @@ nav {
     padding: 0.5rem 2rem;
 }
 
+main{
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-bottom: 2rem;
+    
+}
+
 /* Logo 部分 */
 .logo-container {
     display: flex;
@@ -107,9 +114,9 @@ nav ul .dropdown:hover .submenu {
     transition: opacity 0.3s ease, visibility 0s linear 0s;
 }
 
+
 .carousel {
     width: 100%;
-    max-width: 1000px;
     margin: 2rem auto;
     position: relative;
     overflow: hidden;
@@ -117,52 +124,13 @@ nav ul .dropdown:hover .submenu {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-slide {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide img {
-    width: 100%;
-    flex-shrink: 0;
+.carousel-img {
+    height: 600px;
+    /* 你可以依需求調整高度 */
     object-fit: cover;
+    /* 保持比例裁切填滿 */
+    width: 100%;
 }
-
-/* 控制箭頭 */
-.prev,
-.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    background-color: rgba(0, 0, 50, 0.5);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 0.5rem;
-}
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 50, 0.8);
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
 
 .hero {
     position: relative;
@@ -220,6 +188,124 @@ nav ul .dropdown:hover .submenu {
 
 .btn:hover {
     background-color: #005c99;
+}
+
+.news {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin: 2rem auto;
+    max-width: 100%;
+}
+
+.news h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.news-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.news-list li {
+    background: #ffffff;
+    margin-bottom: 0.75rem;
+    padding: 1rem 1.2rem;
+    border-left: 5px solid #3498db;
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 1rem;
+    color: #333;
+}
+
+.news-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-list .date {
+    font-weight: bold;
+    color: #2980b9;
+    margin-right: 0.5rem;
+}
+
+.team-preview {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin: 2rem auto;
+}
+
+.team-preview h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.member-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.member-card h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.member-card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.teambtn {
+    display: inline-block;
+    background-color: #2980b9;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.teambtn:hover {
+    background-color: #1c5983;
 }
 
 /* Main 內容區 */
@@ -390,6 +476,7 @@ nav ul .dropdown:hover .submenu {
     font-style: italic;
     margin-top: 0.8rem;
     color: #99ccff;
+    text-align: center;
 }
 
 /* 分隔線 */
@@ -466,4 +553,323 @@ footer p {
     margin: 0;
     font-family: 'Arial', sans-serif;
     font-size: 1rem;
+}
+
+.floating {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 12px 20px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    animation: floatY 3s ease-in-out infinite;
+}
+
+.floating:hover {
+    background-color: #1976d2;
+    /* 改變背景顏色 */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    /* 改變陰影效果 */
+}
+
+@keyframes floatY {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 模態框的背景 */
+.modal {
+    display: none;
+    /* 默認隱藏 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 半透明黑色背景 */
+    padding-top: 100px;
+    text-align: center;
+}
+
+/* 模態框內容 */
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 500px;
+    max-height: 70vh;
+    /* 限制最大高度為視窗高度的 80% */
+    overflow-y: auto;
+    /* 垂直內容過多時顯示捲軸 */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* 關閉按鈕 */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 標題樣式 */
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2196f3;
+}
+
+/* 下拉選單 */
+#injurySelect {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+/* 當選擇框獲得焦點時 */
+#injurySelect:focus {
+    border-color: #2196f3;
+    outline: none;
+}
+
+/* 顯示傷勢細節區域 */
+.injury-details {
+    padding: 15px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    display: none;
+    /* 預設隱藏 */
+    border: 1px solid #ccc;
+}
+
+.injury-details h3 {
+    text-align: center;
+    color: #d32f2f;
+    /* 可選：加強顏色區別 */
+    margin-bottom: 15px;
+}
+
+.injury-details ul {
+    text-align: left;
+    padding-left: 20px;
+    /* 保留縮排 */
+    margin: 0 auto;
+    list-style-type: disc;
+    /* 或 square、circle，看你風格喜好 */
+}
+
+/* 可以根據不同選項變換的傷勢細節 */
+.injury-details.active {
+    display: block;
+}
+
+.injury-details {
+    margin-top: 1.5rem;
+}
+
+.vital-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.vital-btn:hover {
+    background-color: #388e3c;
+}
+
+.vital-signs {
+    display: none;
+    margin-top: 1.5rem;
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #90caf9;
+    text-align: left;
+}
+
+.vital-signs h3 {
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+.vital-signs ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.emergency-page {
+    padding: 2rem;
+    background-color: #f4f8ff;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.emergency-hero {
+    background-color: #003366;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.emergency-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #FFD700;
+}
+
+.emergency-intro,
+.emergency-features,
+.emergency-doctor {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.emergency-features ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.emergency-features li {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #003366;
+}
+
+.emergency-features i {
+    color: #FF4500;
+    margin-right: 0.5rem;
+}
+
+.treatment-steps {
+    background-color: #f9f9f9;
+    border-left: 5px solid #2196f3;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.treatment-steps h3 {
+    margin-bottom: 15px;
+    color: #1e88e5;
+}
+
+.treatment-section {
+    margin-bottom: 15px;
+}
+
+.treatment-section h4 {
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.treatment-section ul {
+    list-style-type: "🩺 ";
+    padding-left: 1.5rem;
+}
+
+.treatment-section li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.doctor-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+}
+
+.doctor-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 4px solid #007b83;
+}
+
+.doctor-card h3 {
+    margin: 0.5rem 0 0.3rem;
+    font-size: 1.25rem;
+    color: #007b83;
+}
+
+.doctor-card .position {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.doctor-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.doctor-card img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
 }
