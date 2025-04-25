@@ -124,6 +124,16 @@ nav ul .dropdown:hover .submenu {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 黑色半透明背景 */
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    /* 增加文字清晰度 */
+}
+
 .carousel-img {
     height: 600px;
     /* 你可以依需求調整高度 */
@@ -135,13 +145,13 @@ nav ul .dropdown:hover .submenu {
 .hero {
     position: relative;
     height: 100vh;
-    background-color: #004080;
-    /* 純藍背景 */
+    background: linear-gradient(135deg, #002b55, #004080);
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -151,44 +161,56 @@ nav ul .dropdown:hover .submenu {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 50, 0.4);
-    /* 淡淡的深藍遮罩 */
-    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 50, 0.5);
+    backdrop-filter: blur(4px);
     z-index: 1;
 }
 
 .hero .overlay {
     position: relative;
     z-index: 2;
-    padding: 3rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    /* 微透明卡片背景 */
-    border-radius: 1rem;
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-weight: 700;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-.btn {
-    background-color: #007acc;
+.btn-cta {
+    padding: 0.75rem 2rem;
+    background: #ff595e;
     color: white;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 89, 94, 0.4);
 }
 
-.btn:hover {
-    background-color: #005c99;
+.btn-cta:hover {
+    background: #ff3b40;
+    box-shadow: 0 6px 20px rgba(255, 89, 94, 0.6);
+    transform: translateY(-2px);
 }
+
+
 
 .news {
     background-color: #f9f9f9;
