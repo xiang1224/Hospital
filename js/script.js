@@ -40,9 +40,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Footer 內容
     const footerContent = `
-        <footer>
-            <p>&copy; 2025 此網站為曉翔所有，阿鳥協助製作</p>
-        </footer>
+        <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h4>關於我們</h4>
+            <p>本站由曉翔擁有，阿鳥協助設計與醫療內容統整，致力於打造專業又溫暖的醫療團隊平台。</p>
+        </div>
+        <div class="footer-section links">
+            <h4>快速連結</h4>
+                <a href="team.html">醫療團隊</a>
+                <a href="emergency.html">緊急指南</a>
+                <a href="contact.html">聯絡我們</a>
+        </div>
+        <div class="footer-section social">
+            <h4>追蹤我們</h4>
+            <a href="https://www.twitch.tv/capricornxiang" target="_blank">Twitch - 暈船仔丨小翔丨</a>
+            <a href="https://www.twitch.tv/smartbird1102" target="_blank">Twitch - 阿鳥</a>
+            <a href="https://www.twitch.tv/sick1122" target="_blank">Twitch - 稀客</a>
+        </div>
+        <div class="footer-section hospital-logo">
+            <img src="./img/logo.png" alt="微光醫院 Logo" class="footer-logo">
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 曉翔 All rights reserved. 阿鳥協助製作</p>
+    </div>
+</footer>
+
     `;
     document.getElementById("footer").innerHTML = footerContent;
 });
