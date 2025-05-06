@@ -19,6 +19,7 @@ main{
     padding-left: 150px;
     padding-right: 150px;
     margin-bottom: 2rem;
+    min-height: 100vh;
     
 }
 
@@ -194,7 +195,8 @@ nav ul .dropdown:hover .submenu {
 
 .btn-cta {
     padding: 0.75rem 2rem;
-    background: #ff595e;
+    background: #007bff;
+    /* 主色：亮藍 */
     color: white;
     border: none;
     border-radius: 2rem;
@@ -202,16 +204,89 @@ nav ul .dropdown:hover .submenu {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 89, 94, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
 }
 
 .btn-cta:hover {
-    background: #ff3b40;
-    box-shadow: 0 6px 20px rgba(255, 89, 94, 0.6);
+    background: #0056b3;
+    /* Hover 深藍 */
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
     transform: translateY(-2px);
 }
 
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
 
+.custom-modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50px);
+    opacity: 1;
+    transition: all 0.3s ease;
+        
+}
+
+.custom-modal.show .custom-modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.custom-modal-content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.custom-modal-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0.8rem 0;
+    line-height: 1.6;
+}
+
+.custom-modal-content ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.custom-modal-content li {
+    margin: 0.8rem 0;
+    font-weight: 500;
+}
+
+.custom-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.custom-close:hover {
+    color: #ff4081;
+    /* 當鼠標懸停時顯示醒目顏色 */
+}
 
 .news {
     background-color: #f9f9f9;
@@ -366,26 +441,45 @@ font-size: 1.8rem;
 
 /* Main 內容區 */
 .main-content {
-    padding: 2rem 5%;
-    background-color: white;
+    padding: 4rem 8%;
+    background: linear-gradient(to bottom, #ffffff, #f0f4f8);
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
 }
 
-.intro-section,
-.history-section,
-.mission-section,
-.facilities-section {
-    margin-bottom: 3rem;
+.section-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    background-color: #ffffff;
+    border-left: 6px solid #0066cc;
     padding: 2rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.intro-section:nth-child(even),
-.history-section:nth-child(even),
-.mission-section:nth-child(even),
-.facilities-section:nth-child(even) {
-    background-color: #eaf3ff;
+.section-block:hover {
+    transform: translateY(-4px);
+}
+
+.section-icon {
+    font-size: 3rem;
+    color: #0066cc;
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+}
+
+.section-content h1,
+.section-content h2 {
+    margin-bottom: 1rem;
+    color: #003366;
+}
+
+.section-content p {
+    line-height: 1.8;
+    font-size: 1.05rem;
 }
 
 .team-section {
@@ -646,7 +740,6 @@ font-size: 1.8rem;
 .footer-logo {
     width: 100%;
     height: auto;
-    margin: 0.5rem 0;
 }
 
 .floating {
@@ -929,6 +1022,7 @@ h2 {
     padding: 1.5rem;
     text-align: center;
     transition: transform 0.3s ease;
+    filter: blur(12px);
 }
 
 .doctor-card:hover {
@@ -966,4 +1060,210 @@ h2 {
     max-width: 150px;
     border-radius: 50%;
     margin-bottom: 1rem;
+}
+
+
+/* 常用術語部分 */
+.resource-page {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.resource-page h1 {
+    color: #004080;
+    margin-bottom: 1rem;
+}
+
+.term-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.term-card {
+    background-color: #f0f8ff;
+    border-left: 6px solid #004080;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.term-card h3 {
+    margin-top: 0;
+    color: #004080;
+}
+
+/* 懸浮效果 */
+.term-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    background-color: #e6f2ff;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.filter-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background-color: #e0ecff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: #004080;
+}
+
+.filter-btn.active {
+    background-color: #004080;
+    color: white;
+}
+
+
+/* 常用藥物部分 */
+.medication-section {
+    padding: 2rem 10rem;
+    background: #f7f9fc;
+}
+
+.filter-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#med-search {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag-btn {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.tag-btn.active,
+.tag-btn:hover {
+    background-color: #004080;
+    color: white;
+}
+
+.medications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.med-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.construction-modal {
+    display: none;
+    position: fixed;
+    z-index: 9998;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.construction-content {
+    background: #ffffff;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    max-width: 420px;
+    animation: popUp 0.3s ease;
+}
+
+.construction-content h2 {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+.construction-content p {
+    font-size: 1rem;
+    color: #555;
+    margin: 1rem 0 1.5rem;
+}
+
+.construction-content button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.construction-content button:hover {
+    background-color: #0056b3;
+}
+
+.construction-content .icon {
+    font-size: 2.5rem;
+    color: #ffc107;
+    margin-bottom: 0.3rem;
+}
+
+/* 動畫 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

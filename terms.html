@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>白塔醫院 | 末日醫療中心</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+    <main class="resource-page">
+        <h1><i class="fa-solid fa-book-medical"></i> 常用醫療術語</h1>
+        <input type="text" id="searchInput" placeholder="搜尋術語..." class="search-bar" />
+        <div class="filter-tags">
+            <button class="filter-btn active" data-category="all">全部</button>
+            <button class="filter-btn" data-category="Injection">注射相關</button>
+            <button class="filter-btn" data-category="state">狀態相關</button>
+            <button class="filter-btn" data-category="department">部門/單位相關</button>
+            <button class="filter-btn" data-category="check">檢查相關</button>
+        </div>
+        <div class="term-list">
+            <div class="term-card" data-category="state">
+                <h3>BP(Blood Pressure)</h3>
+                <p>血壓。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>Vital signs(V/S)</h3>
+                <p>生命徵象。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>Conscious</h3>
+                <p>意識。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>Airway</h3>
+                <p>呼吸道。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>Ambu/BVM</h3>
+                <p>Bag Valve Mask，手動式甦醒球。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>Suction</h3>
+                <p>抽吸。</p>
+            </div>
+            <div class="term-card" data-category="Injection">
+                <h3>IV</h3>
+                <p>Intravenous therapy，靜脈注射。</p>
+            </div>
+            <div class="term-card" data-category="Injection">
+                <h3>IM</h3>
+                <p>Intramuscular injection，肌肉注射。</p>
+            </div>
+            <div class="term-card" data-category="Injection">
+                <h3>IO</h3>
+                <p>Intraosseous，骨髓內注射。</p>
+            </div>
+            <div class="term-card" data-category="Injection">
+                <h3>CVC</h3>
+                <p>Central Venous Catheter，大量而快速的靜脈輸液。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>Full Run</h3>
+                <p>把點滴開到最大。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>On endo</h3>
+                <p>Endotracheal Intubation，氣管內插管。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>On Foley</h3>
+                <p>插導尿管。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>On Chest tube</h3>
+                <p>插胸管。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>O2 Mask</h3>
+                <p>氧氣面罩。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>On monitor</h3>
+                <p>連接生理監測儀。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>DOA</h3>
+                <p>Dead on Arrival，到院前死亡。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>OHCA</h3>
+                <p>Out-of-Hospital Cardiac Arrest，到院前心跳停止。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>ROSC</h3>
+                <p>Return of Spontaneous Circulation，自發性血液循環回復。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>SpO₂</h3>
+                <p>血氧濃度。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>ETCO2</h3>
+                <p>呼氣末二氧化碳濃度，用於監測通氣情況。</p>
+            </div>
+            <div class="term-card">
+                <h3>TA</h3>
+                <p>Traffic Accident，車禍。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>GCS</h3>
+                <p>Glasgow Coma Scale，用於意識昏迷評估。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>shock</h3>
+                <p>休克。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>VF</h3>
+                <p>Ventricular Fibrillation，心室纖維顫動。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>VT</h3>
+                <p>Ventricular Tachycardia，心室性心搏過速。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>PEA</h3>
+                <p>Pulseless Electrical Activity，無脈電機活動。</p>
+            </div>
+            <div class="term-card" data-category="state">
+                <h3>asystole</h3>
+                <p>心率停止。</p>
+            </div>
+            <div class="term-card">
+                <h3>trauma</h3>
+                <p>創傷。</p>
+            </div>
+            <div class="term-card" data-category="Injection">
+                <h3>Whole blood</h3>
+                <p>全血，通常用於治療大量出血、換血療法與自體輸血上。</p>
+            </div>
+            <div class="term-card" data-category="Injection">
+                <h3>Packed RBC</h3>
+                <p>紅血球濃厚液，適用於出血量小於1000cc之患者。</p>
+            </div>
+            <div class="term-card" data-category="Injection">
+                <h3>Platelet concentrate</h3>
+                <p>血小板濃厚液，適用於血小板數目低於10000/mm3之患者。</p>
+            </div>
+            <div class="term-card" data-category="department">
+                <h3>ER</h3>
+                <p>Emergency，急診。</p>
+            </div>
+            <div class="term-card" data-category="department">
+                <h3>ICU</h3>
+                <p>Intensive Care Unit，加護病房。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>OR</h3>
+                <p>Operating Room，開刀房。</p>
+            </div>
+            <div class="term-card" data-category="department">
+                <h3>DR</h3>
+                <p>產房。</p>
+            </div>
+            <div class="term-card" data-category="department">
+                <h3>OPD</h3>
+                <p>Outpatient Department，門診部。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>WARD</h3>
+                <p>住院病房。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>CCU</h3>
+                <p>Coronary Care Unit，冠狀動脈加護病房。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>PICU</h3>
+                <p>Pediatric Intensive Care Unit，小兒加護病房。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>NICU</h3>
+                <p>Neonatal Intensive Care Unit，新生兒加護病房。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>RAD</h3>
+                <p>Radiology Department，放射科。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>LAB</h3>
+                <p>Laboratory，檢驗科。</p>
+            </div>
+            <div class="term-card" data-category="department">
+                <h3>RT</h3>
+                <p>Respiratory Therapy，呼吸治療科。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>GYN</h3>
+                <p>Obstetrics and Gynecology，婦產科。</p>
+            </div>
+            <div class="term-card" data-category="department">
+                <h3>ENT</h3>
+                <p>Otorhinolaryngology，耳鼻喉科。</p>
+            </div>
+            <div class="term-card" data-category="department">
+                <h3>GS</h3>
+                <p>General Surgery，一般外科。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>CS</h3>
+                <p>Cardiothoracic Surgery，胸腔外科。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>CM</h3>
+                <p>Chest Medicine，胸腔內科。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>ORTH</h3>
+                <p>Orthopedics，骨科。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>NS</h3>
+                <p>Neurosurgery，神經外科。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>NEURO</h3>
+                <p>Neurology，神經內科。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>PSY</h3>
+                <p>Psychiatry，精神科。</p>
+            </div>
+
+            <div class="term-card" data-category="department">
+                <h3>PS</h3>
+                <p>Plastic Surgery，整形外科。</p>
+            </div>
+            <div class="term-card" data-category="check">
+                <h3>X-RAY</h3>
+                <p>X光檢查，用於骨折、肺部等初步影像診斷。</p>
+            </div>
+
+            <div class="term-card" data-category="check">
+                <h3>MRI</h3>
+                <p>Magnetic Resonance Imaging，磁振造影，用於軟組織與中樞神經系統檢查。</p>
+            </div>
+
+            <div class="term-card" data-category="check">
+                <h3>CT</h3>
+                <p>Computed Tomography，電腦斷層掃描，用於快速檢查內出血、腫瘤等。</p>
+            </div>
+
+            <div class="term-card" data-category="check">
+                <h3>FAST</h3>
+                <p>Focused Assessment with Sonography for Trauma，創傷快速超音波評估，評估內出血。</p>
+            </div>
+
+            <div class="term-card" data-category="check">
+                <h3>PET</h3>
+                <p>Positron Emission Tomography，正子斷層掃描，常用於癌症代謝活動檢查。</p>
+            </div>
+        </div>
+    </main>
+
+
+    <div id="footer"></div>
+    <script src="./js/script.js"></script>
+    <script src="./js/termssearch.js"></script>
+</body>
+
+</html>

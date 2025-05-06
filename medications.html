@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>白塔醫院 | 末日醫療中心</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+    <main class="medication-section">
+        <h2>常用藥物參考</h2>
+    
+        <!-- 搜尋與分類 -->
+        <div class="filter-bar">
+            <input type="text" id="med-search" placeholder="搜尋藥物名稱或作用...">
+            <div class="tag-filters">
+                <button class="tag-btn active" data-category="all">全部</button>
+                <button class="tag-btn" data-category="pain">鎮痛</button>
+                <button class="tag-btn" data-category="sedation">鎮靜</button>
+                <button class="tag-btn" data-category="vasopressor">升壓劑</button>
+                <button class="tag-btn" data-category="cardiac">心臟用藥</button>
+                <button class="tag-btn" data-category="airway">氣道用藥</button>
+            </div>
+        </div>
+    
+        <!-- 藥物清單 -->
+        <div class="medications-container">
+            <!-- 範例藥物卡片 -->
+            <div class="med-card" data-category="pain">
+                <h3>Ketorolac（Toradol）</h3>
+                <p><strong>用途：</strong>非類固醇消炎止痛藥</p>
+                <p><strong>劑量：</strong>IV/IM 30 mg（成人）</p>
+                <p><strong>備註：</strong>避免用於腎功能不佳病患</p>
+            </div>
+    
+            <div class="med-card" data-category="sedation">
+                <h3>Midazolam（Dormicum）</h3>
+                <p><strong>用途：</strong>鎮靜、抗痙攣</p>
+                <p><strong>劑量：</strong>IV 緩慢注射 2.5–5 mg</p>
+                <p><strong>備註：</strong>注意呼吸抑制</p>
+            </div>
+    
+            <div class="med-card" data-category="vasopressor">
+                <h3>Norepinephrine（Levophed）</h3>
+                <p><strong>用途：</strong>升壓，主要作用於α1受體</p>
+                <p><strong>劑量：</strong>0.05–0.3 mcg/kg/min IV 持續輸注</p>
+                <p><strong>備註：</strong>需中央靜脈輸注</p>
+            </div>
+    
+            <div class="med-card" data-category="cardiac">
+                <h3>Amiodarone</h3>
+                <p><strong>用途：</strong>心律不整（VT/VF）</p>
+                <p><strong>劑量：</strong>初始 300 mg IV push</p>
+                <p><strong>備註：</strong>可重複給予 150 mg</p>
+            </div>
+    
+            <div class="med-card" data-category="airway">
+                <h3>Succinylcholine</h3>
+                <p><strong>用途：</strong>肌肉鬆弛劑，常用於RSI</p>
+                <p><strong>劑量：</strong>1–1.5 mg/kg IV</p>
+                <p><strong>備註：</strong>避免用於高血鉀病患</p>
+            </div>
+        </div>
+    </main>
+
+
+
+    <div id="footer"></div>
+    <script src="./js/script.js"></script>
+    <script src="./js/medsearch.js"></script>
+</body>
+
+</html>
