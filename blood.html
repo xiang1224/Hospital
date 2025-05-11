@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>白塔醫院 | 末日醫療中心</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+    <main class="blood-compatibility-wrapper">
+        <!-- 查詢區塊 -->
+        <section class="blood-checker">
+            <h2>🔍 輸血相容性查詢</h2>
+            <label for="bloodTypeInput">請輸入患者血型：</label>
+            <select id="bloodTypeInput" class="form-select w-auto d-inline-block mx-2">
+                <option value="">--選擇--</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+            <button class="btn btn-primary" onclick="checkCompatibility()">查詢</button>
+            <div id="resultArea" class="mt-3"></div>
+        </section>
+    
+        <!-- 對照表區塊 -->
+        <h2 class="text-center mb-3">🩸 輸血相容性對照表</h2>
+        <p class="text-center text-muted">橫列為捐血者，直行為受血者</p>
+    
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover blood-table">
+                <thead>
+                    <tr>
+                        <th>捐血者＼受血者</th>
+                        <th>O-</th>
+                        <th>O+</th>
+                        <th>A-</th>
+                        <th>A+</th>
+                        <th>B-</th>
+                        <th>B+</th>
+                        <th>AB-</th>
+                        <th>AB+</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>O-</th>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <th>O+</th>
+                        <td></td>
+                        <td>✔</td>
+                        <td></td>
+                        <td>✔</td>
+                        <td></td>
+                        <td>✔</td>
+                        <td></td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <th>A-</th>
+                        <td></td>
+                        <td></td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td></td>
+                        <td></td>
+                        <td>✔</td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <th>A+</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <th>B-</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <th>B+</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔</td>
+                        <td></td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <th>AB-</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔</td>
+                        <td>✔</td>
+                    </tr>
+                    <tr>
+                        <th>AB+</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>✔</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <p class="note text-center text-muted">※ O- 為萬用捐血者，AB+ 為萬用受血者。</p>
+        </main>
+      
+    <div id="footer"></div>
+    <script src="./js/script.js"></script>
+    <script src="./js/medsearch.js"></script>
+    <script src="./js/blood.js"></script>
+</body>
+
+</html>

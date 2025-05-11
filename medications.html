@@ -19,52 +19,244 @@
             <input type="text" id="med-search" placeholder="搜尋藥物名稱或作用...">
             <div class="tag-filters">
                 <button class="tag-btn active" data-category="all">全部</button>
-                <button class="tag-btn" data-category="pain">鎮痛</button>
-                <button class="tag-btn" data-category="sedation">鎮靜</button>
-                <button class="tag-btn" data-category="vasopressor">升壓劑</button>
+                <button class="tag-btn" data-category="pain">鎮痛 / 解熱</button>
+                <button class="tag-btn" data-category="sedation">鎮靜 / 麻醉</button>
+                <button class="tag-btn" data-category="vasopressor">升壓劑 / 強心劑</button>
                 <button class="tag-btn" data-category="cardiac">心臟用藥</button>
-                <button class="tag-btn" data-category="airway">氣道用藥</button>
+                <button class="tag-btn" data-category="respiratory">呼吸系統</button>
+                <button class="tag-btn" data-category="psychiatric">精神 / 情緒用藥</button>
+                <button class="tag-btn" data-category="seizure">癲癇 / 神經穩定</button>
+                <button class="tag-btn" data-category="allergy">過敏 / 抗組織胺</button>
+                <button class="tag-btn" data-category="toxin">中毒處理</button>
+                <button class="tag-btn" data-category="anesthesia">麻醉相關</button>
+                <button class="tag-btn" data-category="emergency">急救專用</button>
             </div>
+
         </div>
     
         <!-- 藥物清單 -->
         <div class="medications-container">
             <!-- 範例藥物卡片 -->
-            <div class="med-card" data-category="pain">
-                <h3>Ketorolac（Toradol）</h3>
-                <p><strong>用途：</strong>非類固醇消炎止痛藥</p>
-                <p><strong>劑量：</strong>IV/IM 30 mg（成人）</p>
-                <p><strong>備註：</strong>避免用於腎功能不佳病患</p>
+            <div class="med-card" data-category="hypoglycemia">
+                <h3>葡萄糖（Glucose）</h3>
+                <p><strong>用途：</strong>低血糖處置</p>
+                <p><strong>劑量：</strong>IV 推注 D50 或口服</p>
+                <p><strong>備註：</strong>需確認血糖值</p>
             </div>
-    
-            <div class="med-card" data-category="sedation">
-                <h3>Midazolam（Dormicum）</h3>
-                <p><strong>用途：</strong>鎮靜、抗痙攣</p>
-                <p><strong>劑量：</strong>IV 緩慢注射 2.5–5 mg</p>
+            
+            <div class="med-card" data-category="hyperglycemia">
+                <h3>胰島素（Insulin）</h3>
+                <p><strong>用途：</strong>高血糖控制</p>
+                <p><strong>劑量：</strong>依血糖濃度皮下注射</p>
+                <p><strong>備註：</strong>注意低血糖風險</p>
+            </div>
+            
+            <div class="med-card" data-category="fluid">
+                <h3>生理食鹽水（Normal Saline）</h3>
+                <p><strong>用途：</strong>脫水與體液流失補充</p>
+                <p><strong>劑量：</strong>IV 滴注，依病況調整</p>
+                <p><strong>備註：</strong>觀察水腫與心衰徵象</p>
+            </div>
+            
+            <div class="med-card" data-category="cardiac">
+                <h3>硝化甘油（Nitroglycerin, NTG）</h3>
+                <p><strong>用途：</strong>心絞痛、高血壓緩解</p>
+                <p><strong>劑量：</strong>舌下含服 0.3–0.6 mg</p>
+                <p><strong>備註：</strong>避免與 PDE5 抑制劑併用</p>
+            </div>
+            
+            <div class="med-card" data-category="cardiac">
+                <h3>Warfarin / 血栓溶解劑</h3>
+                <p><strong>用途：</strong>急性心肌梗塞處置</p>
+                <p><strong>劑量：</strong>依 INR 與醫師指示</p>
+                <p><strong>備註：</strong>密切監測出血風險</p>
+            </div>
+            
+            <div class="med-card" data-category="emergency">
+                <h3>腎上腺素（Epinephrine／Bosmin）</h3>
+                <p><strong>用途：</strong>急性過敏反應、心跳停止、休克</p>
+                <p><strong>劑量：</strong>過敏：0.3–0.5 mg IM；CPR：1 mg IV 每3–5分鐘</p>
+                <p><strong>備註：</strong>觀察心律、避免重複劑量過多引發心律不整</p>
+            </div>
+            <div class="med-card" data-category="pain">
+                <h3>嗎啡（Morphine）</h3>
+                <p><strong>用途：</strong>劇烈疼痛控制</p>
+                <p><strong>劑量：</strong>IV 2–4 mg 緩慢注射</p>
                 <p><strong>備註：</strong>注意呼吸抑制</p>
             </div>
-    
+            
+            <div class="med-card" data-category="respiratory">
+                <h3>支氣管擴張劑（Bronchodilator）</h3>
+                <p><strong>用途：</strong>氣喘緩解</p>
+                <p><strong>劑量：</strong>吸入型（如 Salbutamol）</p>
+                <p><strong>備註：</strong>可配合吸入器或霧化器使用</p>
+            </div>
+            
+            <div class="med-card" data-category="trauma">
+                <h3>止血劑（Transamin）</h3>
+                <p><strong>用途：</strong>創傷止血</p>
+                <p><strong>劑量：</strong>IV 或口服，視嚴重程度調整</p>
+                <p><strong>備註：</strong>避免用於活動性血栓病患</p>
+            </div>
+            
+            <div class="med-card" data-category="shock">
+                <h3>多巴胺（Dopamine）</h3>
+                <p><strong>用途：</strong>心因性、低血容積性休克</p>
+                <p><strong>劑量：</strong>2–10 mcg/kg/min IV 滴注</p>
+                <p><strong>備註：</strong>需監控心跳與血壓</p>
+            </div>
+            
+            <div class="med-card" data-category="hypertensive-crisis">
+                <h3>降血壓藥（Phenoxybenzamine）</h3>
+                <p><strong>用途：</strong>高血壓危象</p>
+                <p><strong>劑量：</strong>依病人反應調整</p>
+                <p><strong>備註：</strong>常用於嗜鉻細胞瘤患者</p>
+            </div>
+
+            <div class="med-card" data-category="anesthesia">
+                <h3>Propofol（丙泊酚）</h3>
+                <p><strong>用途：</strong>全身麻醉</p>
+                <p><strong>劑量：</strong>IV 起始 1–2.5 mg/kg</p>
+                <p><strong>備註：</strong>快速作用，注意呼吸抑制</p>
+            </div>
+            
+            <div class="med-card" data-category="anesthesia">
+                <h3>Lidocaine（利多卡因）</h3>
+                <p><strong>用途：</strong>局部麻醉</p>
+                <p><strong>劑量：</strong>局部注射或塗抹，最多不超過 300 mg</p>
+                <p><strong>備註：</strong>過量可能引起中樞神經毒性</p>
+            </div>
+            
+            <div class="med-card" data-category="emergency">
+                <h3>Dantrolene（單挫林）</h3>
+                <p><strong>用途：</strong>麻醉引起的惡性高熱</p>
+                <p><strong>劑量：</strong>IV 2.5 mg/kg，可重複給予</p>
+                <p><strong>備註：</strong>須立即施打，並降溫處理</p>
+            </div>
+            
+            <div class="med-card" data-category="pain">
+                <h3>Ibuprofen（止痛藥）</h3>
+                <p><strong>用途：</strong>止痛（口服）、抗發炎</p>
+                <p><strong>劑量：</strong>200–400 mg 每 6–8 小時</p>
+                <p><strong>備註：</strong>避免用於胃潰瘍或腎病患</p>
+            </div>
+            
+            <div class="med-card" data-category="pain">
+                <h3>Acetaminophen（普拿疼）</h3>
+                <p><strong>用途：</strong>止痛、退燒、抗發炎</p>
+                <p><strong>劑量：</strong>500–1000 mg 每 4–6 小時</p>
+                <p><strong>備註：</strong>避免過量，注意肝毒性</p>
+            </div>
+            
+            <div class="med-card" data-category="respiratory">
+                <h3>Codeine（可待因）</h3>
+                <p><strong>用途：</strong>止咳</p>
+                <p><strong>劑量：</strong>10–20 mg 每 4–6 小時</p>
+                <p><strong>備註：</strong>有成癮性，注意呼吸抑制</p>
+            </div>
+            
+            <div class="med-card" data-category="allergy">
+                <h3>抗組織胺（Antihistamines）</h3>
+                <p><strong>用途：</strong>過敏反應</p>
+                <p><strong>劑量：</strong>如 Diphenhydramine 25–50 mg</p>
+                <p><strong>備註：</strong>常引起嗜睡</p>
+            </div>
+            
+            <div class="med-card" data-category="toxin">
+                <h3>Atropine（阿托品）</h3>
+                <p><strong>用途：</strong>有機磷中毒（如巴拉松）</p>
+                <p><strong>劑量：</strong>IV 0.5–2 mg，每 5 分鐘重複</p>
+                <p><strong>備註：</strong>搭配 Pralidoxime 使用效果更佳</p>
+            </div>
+            
+            <div class="med-card" data-category="anxiety">
+                <h3>Xanax（鎮靜安眠藥）</h3>
+                <p><strong>用途：</strong>焦慮、肌肉痙攣、焦慮引起的氣喘</p>
+                <p><strong>劑量：</strong>0.25–0.5 mg 每日 2–3 次</p>
+                <p><strong>備註：</strong>具成癮性與耐受性</p>
+            </div>
+            
+            <div class="med-card" data-category="sedation">
+                <h3>Dexmedetomidine（鎮靜劑）</h3>
+                <p><strong>用途：</strong>鎮靜（急性精神病患）</p>
+                <p><strong>劑量：</strong>IV 持續輸注 0.2–0.7 mcg/kg/hr</p>
+                <p><strong>備註：</strong>不抑制呼吸，常用於 ICU</p>
+            </div>
+            
+            <div class="med-card" data-category="psychiatric">
+                <h3>Fluoxetine（百憂解）</h3>
+                <p><strong>用途：</strong>憂鬱症</p>
+                <p><strong>劑量：</strong>每日一次 20 mg</p>
+                <p><strong>備註：</strong>SSRI 類抗憂鬱劑，可能需數週見效</p>
+            </div>
+            
+            <div class="med-card" data-category="psychiatric">
+                <h3>Duloxetine（千憂解）</h3>
+                <p><strong>用途：</strong>重度憂鬱症、神經性疼痛</p>
+                <p><strong>劑量：</strong>每日 30–60 mg</p>
+                <p><strong>備註：</strong>SNRI 類，可能造成噁心與焦慮</p>
+            </div>
+            
+            <div class="med-card" data-category="cardiac">
+                <h3>Digoxin（毛地黃）</h3>
+                <p><strong>用途：</strong>心搏過速、心衰</p>
+                <p><strong>劑量：</strong>0.125–0.25 mg 每日</p>
+                <p><strong>備註：</strong>需監測血中濃度，易中毒</p>
+            </div>
+            
+            <div class="med-card" data-category="seizure">
+                <h3>Phenytoin（阿雷彼阿慶注射液）</h3>
+                <p><strong>用途：</strong>癲癇大發作、毛地黃中毒相關心律不整</p>
+                <p><strong>劑量：</strong>IV loading dose 15–20 mg/kg</p>
+                <p><strong>備註：</strong>監測心律與血壓</p>
+            </div>
+            
+            <div class="med-card" data-category="cardiac">
+                <h3>Adenosine（安室律注射劑）</h3>
+                <p><strong>用途：</strong>PSVT（陣發性心室上心搏過速）</p>
+                <p><strong>劑量：</strong>IV push 6 mg，未效可給 12 mg</p>
+                <p><strong>備註：</strong>快速注射並立即沖洗，可能出現短暫心跳停止</p>
+            </div>
             <div class="med-card" data-category="vasopressor">
-                <h3>Norepinephrine（Levophed）</h3>
+                <h3>Norepinephrine（力復非他注射液）</h3>
                 <p><strong>用途：</strong>升壓，主要作用於α1受體</p>
                 <p><strong>劑量：</strong>0.05–0.3 mcg/kg/min IV 持續輸注</p>
                 <p><strong>備註：</strong>需中央靜脈輸注</p>
             </div>
-    
-            <div class="med-card" data-category="cardiac">
-                <h3>Amiodarone</h3>
-                <p><strong>用途：</strong>心律不整（VT/VF）</p>
-                <p><strong>劑量：</strong>初始 300 mg IV push</p>
-                <p><strong>備註：</strong>可重複給予 150 mg</p>
+            
+            <div class="med-card" data-category="vasopressor">
+                <h3>Dopamine（多巴胺）</h3>
+                <p><strong>用途：</strong>心因性或低血容休克</p>
+                <p><strong>劑量：</strong>2–20 mcg/kg/min IV 持續輸注</p>
+                <p><strong>備註：</strong>高劑量可能引發心律不整</p>
             </div>
-    
-            <div class="med-card" data-category="airway">
-                <h3>Succinylcholine</h3>
-                <p><strong>用途：</strong>肌肉鬆弛劑，常用於RSI</p>
-                <p><strong>劑量：</strong>1–1.5 mg/kg IV</p>
-                <p><strong>備註：</strong>避免用於高血鉀病患</p>
+            
+            <div class="med-card" data-category="vasopressor">
+                <h3>Dobutamine（健多博注射液）</h3>
+                <p><strong>用途：</strong>強心劑，提升心輸出量</p>
+                <p><strong>劑量：</strong>2.5–20 mcg/kg/min IV 持續輸注</p>
+                <p><strong>備註：</strong>主要作用於β1受體</p>
             </div>
+            
+            <div class="med-card" data-category="vasopressor">
+                <h3>Vasopressin（抗利尿激素）</h3>
+                <p><strong>用途：</strong>血管收縮，搭配其他升壓劑使用</p>
+                <p><strong>劑量：</strong>0.01–0.04 units/min IV</p>
+                <p><strong>備註：</strong>不作用於腎上腺受體</p>
+            </div>
+
         </div>
+        <div class="med-warning">
+            <h4>⚠️ 注意事項</h4>
+            <ul>
+                <li>所有藥物之劑量僅供參考，實際使用請依照臨床醫師判斷與當前病人狀況調整。</li>
+                <li>藥物使用應依照當地法規與醫療指引進行。</li>
+                <li>請確認病人是否有過敏史，尤其是對該類藥物的過敏反應。</li>
+                <li>注射類藥物須確認是否需經中央靜脈給藥。</li>
+                <li>本頁面內容僅供學術與學習用途，不應取代醫療專業判斷。</li>
+            </ul>
+        </div>
+
     </main>
 
 

@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <li class="dropdown">
             <a href="#">醫療資源 ▾</a>
             <ul class="submenu">
+                <li><a href="blood.html">輸血相關</a></li>
                 <li><a href="terms.html">常用術語</a></li>
                 <li><a href="medications.html" onclick="showConstructionPopup(event)">常見藥物</a></li>
             </ul>
