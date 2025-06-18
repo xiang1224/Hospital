@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="#">關於我們 ▾</a>
             <ul class="submenu">
                 <li><a href="introduce.html">醫院簡介</a></li>
-                <li><a href="team.html" onclick="showConstructionPopup(event)">醫療團隊</a></li>
+                <li><a href="team.html">醫療團隊</a></li>
             </ul>
         </li>
         <li class="dropdown">
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <ul class="submenu">
                 <li><a href="blood.html">輸血相關</a></li>
                 <li><a href="terms.html">常用術語</a></li>
-                <li><a href="medications.html" onclick="showConstructionPopup(event)">常見藥物</a></li>
+                <li><a href="medications.html">常見藥物</a></li>
             </ul>
         </li>
     </ul>
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <!-- 快速連結 -->
         <div class="footer-section links">
             <h4>快速連結</h4>
-            <a href="team.html" onclick="showConstructionPopup(event)">醫療團隊</a>
+            <a href="team.html">醫療團隊</a>
             <a href="emergency.html">緊急指南</a>
         </div>
 
